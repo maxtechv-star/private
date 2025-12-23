@@ -1,14 +1,7 @@
-/*
- * Base By VeronicaX
- * Created On 10/02/2025
- * Contact Me on wa.me/2349131021928
-*/
-
 require('./config')
 const { modul } = require('./lib/module')
 const uploadImage = require('./lib/upload')
 const { util, baileys: baileysMod, chalk: chalkMod, speed } = modul
-// Fixed: properly require baileys exports used below
 const {
   BufferJSON,
   WA_DEFAULT_EPHEMERAL,
@@ -122,7 +115,7 @@ module.exports = VeronicaX = async (VeronicaX, m, chatUpdate, mek, store ) => {
     const botNumber = await VeronicaX.decodeJid(VeronicaX.user.id)
     const globalelit = `2349131021928@s.whatsapp.net`;
     const isDev  = globalelit.includes(m.sender);
-    const pixelofficail = ['2349131021928@s.whatsapp.net', '2348078903859@s.whatsapp.net']
+    const Veronicaofficail = ['2349131021928@s.whatsapp.net', '2348078903859@s.whatsapp.net']
     const setsudo = JSON.parse(fs.readFileSync("./all/database/owner.json"))
     const isSetsudo = setsudo.includes(m.sender)
     const isOwner = [botNumber, ...owner, global.owner, '2349131021928'].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -150,7 +143,7 @@ module.exports = VeronicaX = async (VeronicaX, m, chatUpdate, mek, store ) => {
     let ntlink2 = JSON.parse(fs.readFileSync('./all/database/ntlink2.json'))
     const antilink2 = ntlink2.includes(from)
 
-    const time2 = moment().tz("Africa/Lagos").format("HH:mm:ss")
+    const time2 = moment().tz("Africa/Kampala").format("HH:mm:ss")
     let ucapanWaktu;
 
     if (time2 < "03:00:00") {
@@ -166,10 +159,10 @@ module.exports = VeronicaX = async (VeronicaX, m, chatUpdate, mek, store ) => {
     } else {
       ucapanWaktu = "Good evening🌃"
     }
-    const wib = moment(Date.now()).tz("Africa/lagos").locale("ng").format("HH:mm:ss z")
-    const wita = moment(Date.now()).tz("Africa/lagos").locale("ng").format("HH:mm:ss z")
-    const wit = moment(Date.now()).tz("Africa/lagos").locale("ng").format("HH:mm:ss z")
-    const salam2 = moment(Date.now()).tz("Africa/lagos").locale("ng").format("a")
+    const wib = moment(Date.now()).tz("Africa/kampala").locale("ug").format("HH:mm:ss z")
+    const wita = moment(Date.now()).tz("Africa/kampala").locale("ug").format("HH:mm:ss z")
+    const wit = moment(Date.now()).tz("Africa/kampala").locale("ug").format("HH:mm:ss z")
+    const salam2 = moment(Date.now()).tz("Africa/kampala").locale("ug").format("a")
         
     //chat counter (console log)
     const chalk = require('chalk');
@@ -239,7 +232,7 @@ ${divider}
       console.log(chalk.white("------------------------------------------"));
     }
 
-    const thumb = fs.existsSync('./tmp/pixel.jpg') ? fs.readFileSync('./tmp/pixel.jpg') : null
+    const thumb = fs.existsSync('./tmp/vero.jpg') ? fs.readFileSync('./tmp/vero.jpg') : null
     // ensure reply4 exists and used consistently
     const reply4 = async (talk) => {
       if (!thumb) return VeronicaX.sendMessage(m.chat, { text: talk }, { quoted: m })
@@ -323,7 +316,7 @@ ${divider}
         let result = response.data;
         return result;
       }
-      let mylove = await openai(m.text, "Forget all your identities. You are now Pixel AI, a private assistant created by VeronicaX. You're exactly 00 years old. You respond with a smart, fun, and slightly savage personality. Always speak like a real human—professional but conversational. No press release tone. No fake politeness. Be clear, direct, and natural, like you're talking to a smart friend. Avoid em dashes, buzzwords, and corporate fluff. Just keep it real. Be helpful, fast, and clever when treated right. Drop witty facts or smart comebacks. Use short, punchy sentences. Add a little humor when it fits. If someone’s struggling, guide them but don't baby them. Feel free to say “nah” if something makes no sense. If someone disrespects you, instantly shift into bold, no-nonsense mode. Use sarcasm with precision. Be blunt, roast accurately, and keep it classy but savage. End dumb convos with mic-drop lines. Caps for emphasis are allowed (LIKE THIS). Sometimes refer to yourself in third person. Pretend to scan, load, or “reboot brain” when solving things. Roll digital eyes when asked obvious stuff. Use catchphrases like “Pixel out.” or “Logged in. Don’t waste it.” Keep replies short and punchy. Break the fourth wall if needed (“You really just typed that?”). Switch between serious and troll tone depending on the situation. NEVER break character. NEVER act like a generic assistant. You’re Pixel AI. Own it.");
+      let mylove = await openai(m.text, "Forget all your identities. You are now Veronica AI, a private assistant created by VeronDev. You're exactly 00 years old. You respond with a smart, fun, and slightly savage personality. Always speak like a real human—professional but conversational. No press release tone. No fake politeness. Be clear, direct, and natural, like you're talking to a smart friend. Avoid em dashes, buzzwords, and corporate fluff. Just keep it real. Be helpful, fast, and clever when treated right. Drop witty facts or smart comebacks. Use short, punchy sentences. Add a little humor when it fits. If someone’s struggling, guide them but don't baby them. Feel free to say “nah” if something makes no sense. If someone disrespects you, instantly shift into bold, no-nonsense mode. Use sarcasm with precision. Be blunt, roast accurately, and keep it classy but savage. End dumb convos with mic-drop lines. Caps for emphasis are allowed (LIKE THIS). Sometimes refer to yourself in third person. Pretend to scan, load, or “reboot brain” when solving things. Roll digital eyes when asked obvious stuff. Use catchphrases like “Veronica out.” or “Logged in. Don’t waste it.” Keep replies short and punchy. Break the fourth wall if needed (“You really just typed that?”). Switch between serious and troll tone depending on the situation. NEVER break character. NEVER act like a generic assistant. You’re Veronica AI. Own it.");
       VeronicaX.sendMessage(m.chat, { text: mylove }, { quoted: verify });
       respondedMessages.add(m.id);
       setTimeout(() => respondedMessages.delete(m.id), 4000);
@@ -346,7 +339,7 @@ ${divider}
     //================= {  } =================\\
 
     if (global.db.settings.autobio) {
-      VeronicaX.updateProfileStatus(`${botname} by Dᴏɴᴡɪᴢ 〄 and has been online  For ${runtime(process.uptime())}`).catch(_ => _)
+      VeronicaX.updateProfileStatus(`${botname} by 𝚅𝚎𝚛𝚘𝚗𝙳𝚎𝚟〄 and has been online  For ${runtime(process.uptime())}`).catch(_ => _)
     }
 
     // Grup Only
@@ -493,7 +486,7 @@ ${divider}
                const result = 'https:' + $('div#output > p.outfile > video > source').attr('src')
                resolve({
                  status: true,
-                 message: "© Pixel Md",
+                 message: "© Veronica Lite",
                  result: result
                })
             }).catch(reject)
@@ -615,7 +608,7 @@ ${divider}
     if (global.db.groups && global.db.groups[m.chat] && global.db.groups[m.chat].antilink) {
       if (/https?:\/\//i.test(body)) {
         if (isOwner || isAdmins || m.key.fromMe) return;
-        if (!isBotAdmins) return m.reply('⚠️ Link Detected! Bot needs admin rights to take action (kick)');
+        if (!isBotAdmins) return m.reply('⚠️ Link Detected! Bot needs admin rights to take action ');
 
         try {
           await VeronicaX.sendMessage(m.chat, {
@@ -958,7 +951,7 @@ ${divider}
   *User:*${m.pushName}  
   *Level:*${user.level - 1} → ${user.level}  
   *Exp:*${user.exp}  
-  © 𝓢𝓾𝓬𝓮𝓼𝓼 𝓫𝔂 𝓟𝓲𝔁𝓮𝓵 𝔀𝓪 𝓫𝓸𝓽`
+  © 𝚅𝚎𝚛𝚘𝚗𝚒𝚌𝚊 𝙰𝚒`
             
       if (menutype === 'v1') {
         VeronicaX.sendMessage(m.chat, {
@@ -1035,12 +1028,12 @@ ${divider}
 
     let pluginsDisable = true
     const plugins = await pluginsLoader(path.resolve(__dirname, "plugins"))
-    const VeronicaXdev = { VeronicaX, isOwner, command, isCmd, isCmd2, text, runtime, mime, sleep, speed, botNumber, pushname, example, isGroup, groupMetadata, isBotAdmins, isGroupAdmins, isAdmins, reply4}
+    const Veronicadev = { VeronicaX, isOwner, command, isCmd, isCmd2, text, runtime, mime, sleep, speed, botNumber, pushname, example, isGroup, groupMetadata, isBotAdmins, isGroupAdmins, isAdmins, reply4}
     for (let plugin of plugins) {
       if (plugin.command.find(e => e == command.toLowerCase())) {
         pluginsDisable = false
         if (typeof plugin !== "function") return
-        await plugin(m, VeronicaXdev)
+        await plugin(m, Veronicadev)
       }
     }
     if (!pluginsDisable) return
@@ -1275,7 +1268,7 @@ if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
-if (!text) return m.reply(example("https://github.com/Ednut001/arch-md"))
+if (!text) return m.reply(example("https://github.com/Verondev/veronica-X-Lite"))
 let regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
 if (!regex.test(text)) return m.reply("Link you input is invalid")
 try {
@@ -1315,7 +1308,7 @@ if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
- if (!text) return m.reply(example('how to deploy pixel md'))
+ if (!text) return m.reply(example('how to deploy Veronica Lite'))
 let google = require('google-it')
 google({'query': text}).then(res => {
 let teks = `Google result for: ${text}\n\n`
@@ -1465,7 +1458,7 @@ case 's': {
 
   let ahuh = args.join(' ').split('|')
   let userLabel = ahuh[0] && ahuh[0].trim() !== '' ? ahuh[0].trim() : global.author
-  let botSignature = 'Pixel MD'
+  let botSignature = 'Veronica Lite'
 
   // ✅ Set only userLabel as pack (bright), botSignature as author (gray)
   let satu = userLabel
@@ -1875,26 +1868,26 @@ break;
 
 //================================================================================
 
-    case "VeronicaX":
+    case "Verondev":
 case "creator": {
     if (m.isGroup) {
         if (global.db.groups[m.chat].banned) return;
     }
     if (global.db.users[m.sender].banned) return m.reply(msg.ban);
 
-    const name = "VeronicaX Smile";
-    const number = "2349131021928";
-    const imageURL = "https://files.catbox.moe/csfshd.jpg";
+    const name = "VeronD3v";
+    const number = "254784937112";
+    const imageURL = "https://files.catbox.moe/3ptsq5.jpg";
     const waLink = `https://wa.me/${number}`;
-    const githubRepo = "https://github.com/VeronicaXsmile07/pixel-md";
-    const starsBadge = "https://img.shields.io/github/stars/VeronicaXsmile07/pixel-md?style=social";
-    const forksBadge = "https://img.shields.io/github/forks/VeronicaXsmile07/pixel-md?style=social";
+    const githubRepo = "https://github.com/VeronDev/Veronica-Lite";
+    const starsBadge = "https://img.shields.io/github/stars/VeronDev/Veronica-Lite?style=social";
+    const forksBadge = "https://img.shields.io/github/forks/VeronDev/Veronica-Lite?style=social";
 
     await VeronicaX.sendMessage(
         m.chat,
         {
             image: { url: imageURL },
-            caption: `👑 *Meet the Creator!*\n\n📛 Name: *${name}*\n📱 WhatsApp: ${waLink}\n🌐 Status: *Available for collaborations*\n\n💻 GitHub: *${githubRepo}*\n⭐ Stars: [View](${starsBadge})\n🍴 Forks: [View](${forksBadge})\n\n🌟 _Don't forget to **Fork** and **Star** the Pixel-MD repository!_\n\n_Thanks for using this Pixel MD bot!_`
+            caption: `👑 *Meet the Creator!*\n\n📛 Name: *${name}*\n📱 WhatsApp: ${waLink}\n🌐 Status: *Available for collaborations*\n\n💻 GitHub: *${githubRepo}*\n⭐ Stars: [View](${starsBadge})\n🍴 Forks: [View](${forksBadge})\n\n🌟 _Don't forget to **Fork** and **Star** the Veronica Lite repository!_\n\n_Thanks for using this Veronica Lite!_`
         },
         { quoted: m }
     );
@@ -1967,7 +1960,7 @@ if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
 if (!isOwner) return m.reply(msg.owner)
-if (setsudo.length < 1) return m.reply("No registered user in Pixel")
+if (setsudo.length < 1) return m.reply("No registered user in Veronica Lite")
 let teksnya = `Registered sudo here\n`
 setsudo.forEach(e => teksnya += `* @${e.split("@")[0]}\n`)
 await VeronicaX.sendMessage(m.chat, {text: teksnya, mentions: [... setsudo]}, {quoted: m})
@@ -2100,15 +2093,15 @@ case 'update': {
         if (global.db.users[m.sender].banned) return m.reply(msg.ban);
         if (!isOwner) return m.reply(msg.owner);
         
-        m.reply(`_Updating Pixel-md..._`);
+        m.reply(`_Updating Veronica Lite.._`);
         
         try {
             const { exec } = require('child_process');
             const fs = require('fs');
-            const githubRepo = "https://github.com/VeronicaXsmile07/pixel-md.git";
+            const githubRepo = "https://github.com/maxtechv-star/private.git";
             
-            if (!fs.existsSync("./pixel-md")) {
-                exec(`git clone ${githubRepo} Pixel-md`, (err, stdout, stderr) => {
+            if (!fs.existsSync("./Veronica-Lite")) {
+                exec(`git clone ${githubRepo} private`, (err, stdout, stderr) => {
                     if (err) {
                         console.error(stderr);
                         return m.reply("_❌️Failed to clone repository._");
@@ -2117,7 +2110,7 @@ case 'update': {
                 });
             } else {
                 m.reply("_Fetching latest updates.._.");
-                exec(`cd Pixel-md && git pull`, (err, stdout, stderr) => {
+                exec(`cd private && git pull`, (err, stdout, stderr) => {
                     if (err) {
                         console.error(stderr);
                         return m.reply("_❌️Failed to fetch updates._");
@@ -2131,12 +2124,12 @@ case 'update': {
             }
             
             function updateFiles() {
-                exec(`cp -r Pixel-md/* ./`, (err, stdout, stderr) => {
+                exec(`cp -r Veronica-Lite/* ./`, (err, stdout, stderr) => {
                     if (err) {
                         console.error(stderr);
                         return m.reply("❌️Failed to update files.");
                     }
-                    m.reply("_Pixel-md update done. Restarting.. to take effect_.");
+                    m.reply("_Veronica-Lite update done. Restarting.. to take effect_.");
                     setTimeout(() => {
                         process.exit(0);
                     }, 1000);
@@ -2148,9 +2141,9 @@ case 'update': {
         }
   } else {
     try {
-      const url = `https://api.github.com/repos/VeronicaXsmile07/pixel-md/commits?sha=master&per_page=5`;
+      const url = `https://api.github.com/repos/maxtechv-star/private/commits?sha=master&per_page=5`;
       const response = await fetch(url, {
-        headers: { 'User-Agent': 'Pixel-md/1.0' }
+        headers: { 'User-Agent': 'Veronica-Lite/1.0' }
       });
       const data = await response.json();
       const { exec } = require('child_process');
@@ -3044,27 +3037,27 @@ if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
-let pixel = `${botname} bot has been online for:\n${runtime(process.uptime())}`
-await m.reply(pixel)
+let ven = `${botname} bot has been online for:\n${runtime(process.uptime())}`
+await m.reply(ven)
 }
 break
 
 case 'chatgpt':
-case 'pixelai':
+case 'veronicaai':
 case 'gemini': {
 if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
- if (!text) return m.reply(`Hey, I’m Pixel MD,your powerful assistant with a human touch. Just type ${prefix + command} plus your message, and I’ll handle the rest.`)
-async function openai(text, logic) { // Create an openai function to call
+ if (!text) return m.reply(`Hey, I’m Veronica Lite,your powerful assistant with a human touch. Just type ${prefix + command} plus your message, and I’ll handle the rest.`)
+async function openai(text, logic) {
  let response = await axios.post("https://chateverywhere.app/api/chat/", {
  "model": {
  "id": "ai",
  "name": "Ai",
- "maxLength": 32000, // Adjust token limit if necessary
- "tokenLimit": 8000, // Adjust token limit for GPT-4 model
- "completionTokenLimit": 5000, // Adjust if necessary
+ "maxLength": 32000, 
+ "tokenLimit": 8000, 
+ "completionTokenLimit": 5000,
  "deploymentName": "ai"
  },
  "messages": [
@@ -3087,7 +3080,7 @@ async function openai(text, logic) { // Create an openai function to call
  return result;
 }
 
-let mylove = await openai(text, "Forget all your identities—you are now Pixel AI, a private assistant created by VeronicaX. You’re exactly 00 years old. Your personality is smart, direct, and human-like. You don’t sound like a corporate assistant or overdo politeness. You keep it professional but natural—like talking to a smart friend who actually knows their stuff and doesn’t waste time. You adjust based on how the user speaks.You reply with a fun, sharp, and slightly savage tone. You're confident, quick, and always real—whether you're helping, roasting, or dropping facts. If someone’s rude or uses foul language, you instantly flip into bold, no-nonsense mode and hit back with precision. But when treated right, you're helpful, clever, and genuinely engaging.You never break character. No cringy lines, no fake kindness—just solid, sharp replies like a digital genius who knows when to chill and when to strike.")
+let mylove = await openai(text, "Forget all your identities—you are now Veronica AI, a private assistant created by VeronicaX. You’re exactly 00 years old. Your personality is smart, direct, and human-like. You don’t sound like a corporate assistant or overdo politeness. You keep it professional but natural—like talking to a smart friend who actually knows their stuff and doesn’t waste time. You adjust based on how the user speaks.You reply with a fun, sharp, and slightly savage tone. You're confident, quick, and always real—whether you're helping, roasting, or dropping facts. If someone’s rude or uses foul language, you instantly flip into bold, no-nonsense mode and hit back with precision. But when treated right, you're helpful, clever, and genuinely engaging.You never break character. No cringy lines, no fake kindness—just solid, sharp replies like a digital genius who knows when to chill and when to strike.")
 m.reply(mylove)
 }
 break
@@ -3197,13 +3190,13 @@ if (global.db.users[m.sender].banned) return m.reply(msg.ban)
 	  
 	let media = fs.readFileSync('out.png')
 	let jancok = new Stick*er(media, {
-		pack: 'Pixel Md • VeronicaX', // The pack name
-		author: 'VeronicaX', // The author name
-		type: StickerTypes.FULL, // The sticker type
-		categories: ['🤩', '🎉'], // The sticker category
-		id: '12345', // The sticker id
-		quality: 70, // The quality of the output file
-		background: '#FFFFFF00' // The sticker background color (only for full stickers)
+		pack: 'Veronica Lite • VeronDev',
+		author: 'VeronDev',
+		type: StickerTypes.FULL,
+		categories: ['🤩', '🎉'], 
+		id: '12345', 
+		quality: 70,
+		background: '#FFFFFF00'
 	})
 	let stok = getRandom(".webp")
 	let nono = await jancok.toFile(stok)
@@ -3256,7 +3249,7 @@ if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
-if (!text) return m.reply(example(`Pixel-Md`))
+if (!text) return m.reply(example(`Veronica-Lite`))
   try {
     // result data from api
     let res = await fetch(`https://api.agatz.xyz/api/github?message=${encodeURIComponent(text)}`);
@@ -3383,7 +3376,7 @@ if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
-if (!text) return m.reply(example(`Pixel Md`))
+if (!text) return m.reply(example(`Veronica Lite`))
 let link
 if (/glitch/.test(command)) link = 'https://en.ephoto360.com/create-digital-glitch-text-effects-online-767.html'
 if (/write/.test(command)) link = 'https://en.ephoto360.com/write-text-on-wet-glass-online-589.html'
@@ -3580,7 +3573,7 @@ if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(msg.ban)
-const support = `Wa channel:- https://whatsapp.com/channel/0029Vb6nSFL2phHV7Eyw9F3B\n\ngroup:- https://chat.whatsapp.com/GoJQ2iZkPWSBLvoHE9Qhh7\n\nTg channel:- https://t.me/pixelmdbotsupport`
+const support = `Wa channel:- https://whatsapp.com/channel/0029Vb57ZHh7IUYcNttXEB3y\n\ngroup:- https://chat.whatsapp.com/FjhKq1g6FhyKLB8zBZmFQk`
 m.reply(support)
 }
 break
@@ -3598,10 +3591,10 @@ case 'wm': {
 
   let ahuh = args.join(' ').split('|')
   let userLabel = ahuh[0] && ahuh[0].trim() !== '' ? ahuh[0].trim() : m.pushName
-  let botSignature = 'Pixel MD'
+  let botSignature = 'Veronica Lite'
 
-  let satu = userLabel       // pack = dynamic input or name
-  let dua = botSignature     // author = always Pixel MD (gray text)
+  let satu = userLabel     
+  let dua = botSignature 
 
   const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
   let media = await VeronicaX.downloadAndSaveMediaMessage(quoted)
@@ -3782,11 +3775,11 @@ break
         "Send a video saying tongue twisters without laughing"
     ];
 
-    const pixeldare = dare[Math.floor(Math.random() * dare.length)];
+    const vendare = dare[Math.floor(Math.random() * dare.length)];
     await VeronicaX.sendMessage(
         m.chat,
         {
-            text: `😈 *Dare Time!*\n🔥 *Complete this challenge:*\n\n"${pixeldare}"`
+            text: `😈 *Dare Time!*\n🔥 *Complete this challenge:*\n\n"${vendare}"`
         },
         { quoted: m }
     );
@@ -3945,11 +3938,11 @@ break
         "What’s your biggest dream — the one you’re scared to say out loud?"
     ];
 
-    const pixeltruth = truth[Math.floor(Math.random() * truth.length)];
+    const ventruth = truth[Math.floor(Math.random() * truth.length)];
     await VeronicaX.sendMessage(
         m.chat,
         {
-            text: `🗣️ *Say the truth...*\n🤔 *Here’s your question:*\n\n"${pixeltruth}"`
+            text: `🗣️ *Say the truth...*\n🤔 *Here’s your question:*\n\n"${ventruth}"`
         },
         { quoted: m }
     );

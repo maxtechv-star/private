@@ -34,7 +34,7 @@ const formatp = sizeFormatter({
     keepTrailingZeroes: false,
     render: (literal, symbol) => `${literal} ${symbol}B`,
 })
-let handler = async (m, { donwiz, donwizdev, reply4 }) => {
+let handler = async (m, { VeronicaX, Veronicadev, reply4 }) => {
 let timestampe = speed()
 let latensi = speed() - timestampe
 let me = m.sender
@@ -264,7 +264,7 @@ Hi @${m.sender.split("@")[0]} — welcome to ${botname} ♥︎
 • ${global.simbol} ${global.prefix}Vvdm
 • ${global.simbol} ${global.prefix}Weather`
 if (menutype === 'v1') {
-                    donwiz.sendMessage(m.chat, {
+                    VeronicaX.sendMessage(m.chat, {
                         text: pixelmenu,
                         contextInfo: {
                             externalAdReply: {
@@ -281,12 +281,12 @@ if (menutype === 'v1') {
                         quoted: m
                     })
 } else if (menutype === 'v2' ) {
-                    donwiz.sendMessage(m.chat, { text: pixelmenu }, {
+                    VeronicaX.sendMessage(m.chat, { text: pixelmenu }, {
                         quoted: m
                     })
  } else if (menutype === 'v3' )
  {
-donwiz.sendMessage(m.chat, { image: { url: `${global.thumb}` }, caption: pixelmenu }, { quoted: m })
+VeronicaX.sendMessage(m.chat, { image: { url: `${global.thumb}` }, caption: pixelmenu }, { quoted: m })
 }
 }
 

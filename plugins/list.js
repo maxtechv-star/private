@@ -54,7 +54,7 @@ const formatp = sizeFormatter({
     keepTrailingZeroes: false,
     render: (literal, symbol) => `${literal} ${symbol}B`,
 })
-let handler = async (m, { donwiz, donwizdev, reply4 }) => {
+let handler = async (m, { VeronicaX, Veronicadev, reply4 }) => {
 let timestampe = speed()
 let latensi = speed() - timestampe
 let me = m.sender

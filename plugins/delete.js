@@ -1,4 +1,4 @@
-let handler = async ( m, {donwiz, isOwner, command, isCmd, isCmd2, text, runtime, mime, sleep, speed, botNumber, pushname, example, isGroup, groupMetadata, isBotAdmins, isGroupAdmins, isAdmins, reply4}) => {
+let handler = async ( m, {VeronicaX, isOwner, command, isCmd, isCmd2, text, runtime, mime, sleep, speed, botNumber, pushname, example, isGroup, groupMetadata, isBotAdmins, isGroupAdmins, isAdmins, reply4}) => {
 if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
